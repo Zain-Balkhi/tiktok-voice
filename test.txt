@@ -1,0 +1,2 @@
+py main.py -v VOICE -f FILENAME.txt --session SESSION_ID
+python main.py -v en_us_006 -f script.txt -n slide1a.mp3 --session dfa7ec42f6c57432c14e4b01fc512726

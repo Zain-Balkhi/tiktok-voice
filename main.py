@@ -239,5 +239,29 @@ def sampler():
         req_text = 'TikTok Text To Speech Sample'
         tts(text_speaker, req_text, filename)
 
+
+def wyr():
+    session = "dfa7ec42f6c57432c14e4b01fc512726"
+    text_speaker = "en_us_006"
+
+    file = open('script.txt', 'r')
+    Lines = file.readlines()
+
+    count = 1
+    # Strips the newline character
+    for line in Lines:
+        count += 1
+        slide = count//2
+        if (count % 2) == 0:
+            letter = "a"
+        else:
+            letter = "b"
+        filename = "audio/slide" + str(slide) + letter + ".mp3"
+        req_text = line
+        tts(session, text_speaker, req_text, filename)
+
+
+
 if __name__ == "__main__":
-    main()
+    wyr()
+
